@@ -8,13 +8,23 @@
 
     App.TechnicalSkill = Backbone.Model.extend({
         defaults: {
-                Name: "",
-                Level: 0
+            Name: "",
+            Level: 0
         }
     });
 
     App.TechnicalSkills = Backbone.Collection.extend({
         model: App.TechnicalSkill
+    });
+
+    App.JobPosition = Backbone.Model.extend({
+        defaults: {
+            Name: ""
+        }
+    });
+
+    App.JobPositions = Backbone.Collection.extend({
+        model: App.JobPosition
     });
 
     App.Note = Backbone.Model.extend({
@@ -69,6 +79,7 @@
             this.initCollectionField("SharedLinks", App.SharedLinks);
             this.initCollectionField("CompanyHistory");
             this.initCollectionField("TechnicalSkills", App.TechnicalSkills);
+            this.initCollectionField("ApplicatingToPositions", App.JobPositions);
         }
     });
 
@@ -311,6 +322,14 @@
                         },
                         { controlLink: "Date", name: "ExpirationDate", field: "ExpirationDate", uiDateFormat: "d/m/y" }
                     ]
+                }
+            },
+            ApplyingToPositions: {
+                controlLink: "Collection",
+                item: {
+                    controlLink: "Text",
+                    name: "PositionName",
+                    field: "PositionName"
                 }
             },
             LinkedInLink: {
