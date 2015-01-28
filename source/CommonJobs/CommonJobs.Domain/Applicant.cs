@@ -26,6 +26,9 @@ namespace CommonJobs.Domain
         [Display(Name = "LinkedIn")]
         public string LinkedInLink { get; set; }
 
+        [Display(Name = "Postulandose a posiciones")]
+        public List<JobPosition> ApplyingToPositions { get; set; }
+
         public void AddNote(NoteWithAttachment note)
         {
             this.Notes.Add(note);

@@ -65,6 +65,7 @@
     <Compile Include="AttachmentSlotNecessity.cs" />
     <Compile Include="ApplicantEventType.cs" />
     <Compile Include="EventType.cs" />
+    <Compile Include="JobPosition.cs" />
     <Compile Include="TechnicalSkill.cs" />
     <Compile Include="TechnicalSkillLevel.cs" />
     <Compile Include="User.cs" />
